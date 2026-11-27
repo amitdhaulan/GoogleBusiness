@@ -8,9 +8,9 @@
 <meta name="description" content="Google Business Profile management, local SEO support and practical digital business tools for small businesses.">
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+<!-- GOOGLE ANALYTICS 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1EHDQY9LGF"></script>
 <script>
 window.dataLayer=window.dataLayer||[];
@@ -21,855 +21,160 @@ gtag('config','G-1EHDQY9LGF');
 
 <style>
 :root{
---navy:#102a43;
---navy2:#163b59;
---teal:#13a89e;
---teal-dark:#087f79;
---mint:#e9f8f5;
---paper:#f7fafc;
---white:#fff;
---ink:#172b4d;
---muted:#62748a;
---line:#e3ebf1;
---shadow:0 18px 50px rgba(16,42,67,.10);
+--navy:#102a43;--navy2:#163b59;--teal:#13a89e;--teal-dark:#087f79;
+--mint:#e9f8f5;--paper:#f7fafc;--white:#fff;--ink:#172b4d;
+--muted:#62748a;--line:#e3ebf1;--shadow:0 18px 50px rgba(16,42,67,.10);
 --radius:20px;
 }
-
 *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
-
-body{
-font-family:"DM Sans",Arial,sans-serif;
-color:var(--ink);
-background:white;
-line-height:1.7;
-}
-
+body{font-family:"DM Sans",Arial,sans-serif;color:var(--ink);background:white;line-height:1.7}
 a{text-decoration:none;color:inherit}
-
-.container{
-width:min(1160px,90%);
-margin:auto;
-}
-
-.topbar{
-background:var(--navy);
-color:#dbe8f2;
-font-size:.88rem;
-padding:9px 0;
-}
-
-.topbar .container{
-display:flex;
-justify-content:space-between;
-gap:16px;
-flex-wrap:wrap;
-}
-
-header{
-position:sticky;
-top:0;
-z-index:100;
-background:rgba(255,255,255,.97);
-backdrop-filter:blur(12px);
-border-bottom:1px solid var(--line);
-}
-
-nav{
-min-height:76px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:24px;
-}
-
-.brand{
-font:800 1.2rem Manrope,sans-serif;
-color:var(--navy);
-white-space:nowrap;
-}
-
+.container{width:min(1160px,90%);margin:auto}
+.topbar{background:var(--navy);color:#dbe8f2;font-size:.88rem;padding:9px 0}
+.topbar .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font:800 1.2rem Manrope,sans-serif;color:var(--navy);white-space:nowrap}
 .brand span{color:var(--teal)}
-
-.navlinks{
-display:flex;
-align-items:center;
-gap:20px;
-list-style:none;
-font-size:.91rem;
-font-weight:600;
-color:#43566d;
-}
-
-.navlinks a{
-transition:.2s;
-}
-
-.navlinks a:hover,
-.navlinks a.active{
-color:var(--teal-dark);
-}
-
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-gap:9px;
-padding:13px 21px;
-border-radius:10px;
-background:var(--teal);
-color:white;
-font-weight:700;
-border:1px solid var(--teal);
-transition:.2s;
-cursor:pointer;
-}
-
-.btn:hover{
-background:var(--teal-dark);
-transform:translateY(-2px);
-}
-
-.btn.outline{
-background:transparent;
-color:var(--navy);
-border-color:#b8c8d5;
-}
-
-.btn.outline:hover{
-background:var(--mint);
-border-color:var(--teal);
-}
-
-/* HERO */
-
-.hero{
-background:linear-gradient(120deg,#102a43,#163f5b 62%,#0d7775);
-color:white;
-padding:100px 0 92px;
-}
-
-.hero-grid{
-display:grid;
-grid-template-columns:1.25fr .75fr;
-gap:55px;
-align-items:center;
-}
-
-.eyebrow{
-color:#a9f0e6;
-font-size:.83rem;
-font-weight:800;
-letter-spacing:1.5px;
-text-transform:uppercase;
-margin-bottom:20px;
-}
-
-h1,h2,h3{
-font-family:Manrope,"DM Sans",sans-serif;
-line-height:1.2;
-}
-
-h1{
-font-size:clamp(2.45rem,5vw,4.25rem);
-letter-spacing:-2px;
-margin-bottom:22px;
-}
-
-.hero p{
-font-size:1.12rem;
-color:#d5e3ec;
-margin-bottom:30px;
-max-width:690px;
-}
-
-.hero-actions{
-display:flex;
-gap:13px;
-flex-wrap:wrap;
-}
-
-.hero .btn.outline{
-color:white;
-border-color:rgba(255,255,255,.4);
-}
-
-.trust-panel{
-background:rgba(255,255,255,.09);
-border:1px solid rgba(255,255,255,.18);
-border-radius:22px;
-padding:28px;
-}
-
-.trust-panel .big{
-font:800 3.2rem Manrope;
-color:#8ce4d8;
-}
-
+.navlinks{display:flex;align-items:center;gap:20px;list-style:none;font-size:.91rem;font-weight:600;color:#43566d}
+.navlinks a{transition:.2s}
+.navlinks a:hover,.navlinks a.active{color:var(--teal-dark)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 21px;border-radius:10px;background:var(--teal);color:white;font-weight:700;border:1px solid var(--teal);transition:.2s;cursor:pointer}
+.btn:hover{background:var(--teal-dark);transform:translateY(-2px)}
+.btn.outline{background:transparent;color:var(--navy);border-color:#b8c8d5}
+.btn.outline:hover{background:var(--mint);border-color:var(--teal)}
+.hero{background:linear-gradient(120deg,#102a43,#163f5b 62%,#0d7775);color:white;padding:100px 0 92px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}
+.eyebrow{color:#a9f0e6;font-size:.83rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px}
+h1,h2,h3{font-family:Manrope,"DM Sans",sans-serif;line-height:1.2}
+h1{font-size:clamp(2.45rem,5vw,4.25rem);letter-spacing:-2px;margin-bottom:22px}
+.hero p{font-size:1.12rem;color:#d5e3ec;margin-bottom:30px;max-width:690px}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+.hero .btn.outline{color:white;border-color:rgba(255,255,255,.4)}
+.trust-panel{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:28px}
+.trust-panel .big{font:800 3.2rem Manrope;color:#8ce4d8}
 .trust-panel h3{margin:12px 0 8px}
-
-.trust-panel p{
-font-size:.95rem;
-margin:0;
-}
-
-.trust-points{
-display:grid;
-gap:14px;
-margin-top:25px;
-}
-
-.trust-points div{
-display:flex;
-gap:12px;
-align-items:center;
-}
-
+.trust-panel p{font-size:.95rem;margin:0}
+.trust-points{display:grid;gap:14px;margin-top:25px}
+.trust-points div{display:flex;gap:12px;align-items:center}
 .trust-points i{color:#8ce4d8}
-
-/* COMMON SECTIONS */
-
-section{
-padding:84px 0;
-scroll-margin-top:88px;
-}
-
-.section-head{
-text-align:center;
-max-width:760px;
-margin:0 auto 48px;
-}
-
-.kicker{
-color:var(--teal-dark);
-font-size:.8rem;
-font-weight:800;
-letter-spacing:1.5px;
-text-transform:uppercase;
-margin-bottom:12px;
-}
-
-.section-head h2{
-font-size:clamp(1.9rem,3.5vw,2.8rem);
-color:var(--navy);
-margin-bottom:14px;
-}
-
+section{padding:84px 0;scroll-margin-top:88px}
+.section-head{text-align:center;max-width:760px;margin:0 auto 48px}
+.kicker{color:var(--teal-dark);font-size:.8rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+.section-head h2{font-size:clamp(1.9rem,3.5vw,2.8rem);color:var(--navy);margin-bottom:14px}
 .section-head p{color:var(--muted)}
-
 .services,.packages{background:var(--paper)}
-
-.card-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
-}
-
-.service-card{
-background:white;
-border:1px solid var(--line);
-border-radius:var(--radius);
-padding:28px;
-transition:.22s;
-}
-
-.service-card:hover{
-transform:translateY(-5px);
-box-shadow:var(--shadow);
-}
-
-.iconbox{
-width:52px;
-height:52px;
-border-radius:15px;
-background:var(--mint);
-color:var(--teal-dark);
-display:grid;
-place-items:center;
-font-size:1.25rem;
-margin-bottom:20px;
-}
-
-.service-card h3{
-font-size:1.12rem;
-color:var(--navy);
-margin-bottom:10px;
-}
-
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.service-card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.22s}
+.service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.iconbox{width:52px;height:52px;border-radius:15px;background:var(--mint);color:var(--teal-dark);display:grid;place-items:center;font-size:1.25rem;margin-bottom:20px}
+.service-card h3{font-size:1.12rem;color:var(--navy);margin-bottom:10px}
 .service-card p{color:var(--muted);font-size:.95rem}
-
-.service-card ul{
-padding-left:18px;
-margin-top:14px;
-color:#43566d;
-font-size:.9rem;
-}
-
+.service-card ul{padding-left:18px;margin-top:14px;color:#43566d;font-size:.9rem}
 .service-card li{margin:5px 0}
-
-.note{
-margin-top:24px;
-padding:17px 20px;
-border-left:4px solid #f2b84b;
-background:#fff9eb;
-border-radius:9px;
-color:#6b5528;
-font-size:.91rem;
-}
-
-/* WHY ME */
-
-.why-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:45px;
-align-items:center;
-}
-
-.why-copy h2{
-font-size:clamp(1.9rem,3.5vw,2.7rem);
-color:var(--navy);
-margin-bottom:18px;
-}
-
+.note{margin-top:24px;padding:17px 20px;border-left:4px solid #f2b84b;background:#fff9eb;border-radius:9px;color:#6b5528;font-size:.91rem}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.why-copy h2{font-size:clamp(1.9rem,3.5vw,2.7rem);color:var(--navy);margin-bottom:18px}
 .why-copy p{color:var(--muted);margin-bottom:16px}
-
-.quality-list{
-display:grid;
-gap:14px;
-margin-top:24px;
-}
-
-.quality-list div{
-display:flex;
-gap:13px;
-}
-
-.quality-list i{
-color:var(--teal-dark);
-margin-top:5px;
-}
-
+.quality-list{display:grid;gap:14px;margin-top:24px}
+.quality-list div{display:flex;gap:13px}
+.quality-list i{color:var(--teal-dark);margin-top:5px}
 .quality-list strong{display:block}
-
-.quality-list span{
-color:var(--muted);
-font-size:.92rem;
-}
-
-.proof-card{
-background:linear-gradient(145deg,#edf8f7,#f4f8fb);
-padding:34px;
-border-radius:24px;
-border:1px solid #d9eeea;
-}
-
-.proof-card h3{
-color:var(--navy);
-font-size:1.35rem;
-margin-bottom:12px;
-}
-
+.quality-list span{color:var(--muted);font-size:.92rem}
+.proof-card{background:linear-gradient(145deg,#edf8f7,#f4f8fb);padding:34px;border-radius:24px;border:1px solid #d9eeea}
+.proof-card h3{color:var(--navy);font-size:1.35rem;margin-bottom:12px}
 .proof-card p{color:var(--muted);font-size:.96rem}
-
-.proof-tags{
-display:flex;
-flex-wrap:wrap;
-gap:9px;
-margin:22px 0;
-}
-
-.proof-tags span{
-background:white;
-border:1px solid #dce8ed;
-border-radius:30px;
-padding:7px 12px;
-font-size:.82rem;
-font-weight:700;
-}
-
-/* PROCESS */
-
-.process{
-background:var(--navy);
-color:white;
-}
-
+.proof-tags{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0}
+.proof-tags span{background:white;border:1px solid #dce8ed;border-radius:30px;padding:7px 12px;font-size:.82rem;font-weight:700}
+.process{background:var(--navy);color:white}
 .process .section-head h2{color:white}
 .process .section-head p{color:#c2d2df}
 .process .kicker{color:#8ce4d8}
-
-.steps{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:18px;
-}
-
-.step{
-border:1px solid rgba(255,255,255,.16);
-background:rgba(255,255,255,.06);
-border-radius:17px;
-padding:24px;
-}
-
-.step-no{
-font:800 1.5rem Manrope;
-color:#8ce4d8;
-margin-bottom:15px;
-}
-
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);border-radius:17px;padding:24px}
+.step-no{font:800 1.5rem Manrope;color:#8ce4d8;margin-bottom:15px}
 .step h3{font-size:1.05rem;margin-bottom:9px}
 .step p{color:#c2d2df;font-size:.9rem}
-
-/* PACKAGES */
-
-.package-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
-}
-
-.package{
-background:white;
-border:1px solid var(--line);
-border-radius:20px;
-padding:28px;
-}
-
-.package.featured{
-border:2px solid var(--teal);
-box-shadow:var(--shadow);
-}
-
-.package .label{
-font-size:.75rem;
-text-transform:uppercase;
-letter-spacing:1px;
-color:var(--teal-dark);
-font-weight:800;
-}
-
-.package h3{
-font-size:1.3rem;
-color:var(--navy);
-margin:10px 0;
-}
-
+.package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.package{background:white;border:1px solid var(--line);border-radius:20px;padding:28px}
+.package.featured{border:2px solid var(--teal);box-shadow:var(--shadow)}
+.package .label{font-size:.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--teal-dark);font-weight:800}
+.package h3{font-size:1.3rem;color:var(--navy);margin:10px 0}
 .package p{color:var(--muted);font-size:.93rem}
-
-.package ul{
-list-style:none;
-margin:20px 0 25px;
-display:grid;
-gap:10px;
-color:#43566d;
-font-size:.91rem;
-}
-
-.package li:before{
-content:"✓";
-color:var(--teal-dark);
-font-weight:900;
-margin-right:9px;
-}
-
+.package ul{list-style:none;margin:20px 0 25px;display:grid;gap:10px;color:#43566d;font-size:.91rem}
+.package li:before{content:"✓";color:var(--teal-dark);font-weight:900;margin-right:9px}
 .package .btn{width:100%}
+.digital-products{background:linear-gradient(180deg,#f7fafc,#fff)}
+.product-intro{max-width:790px;margin:-22px auto 38px;text-align:center;color:var(--muted)}
+.product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}
+.product-card{background:white;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 8px 25px rgba(16,42,67,.05);transition:.22s;display:flex;flex-direction:column}
+.product-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#b6e5df}
+.product-visual{padding:25px;background:linear-gradient(135deg,#e9f8f5,#edf3fa);min-height:205px;display:flex;align-items:center;justify-content:center}
+.sheet-preview{width:100%;max-width:390px;background:white;border:1px solid #d7e3eb;border-radius:13px;box-shadow:0 14px 30px rgba(16,42,67,.12);padding:15px}
+.sheet-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e7edf2;padding-bottom:10px;margin-bottom:12px;gap:10px}
+.sheet-top strong{font:800 .9rem Manrope;color:var(--navy)}
+.sheet-top span{font-size:.62rem;color:var(--teal-dark);font-weight:800}
+.sheet-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.metric{background:#f4f8fa;border-radius:8px;padding:10px 7px}
+.metric small{display:block;color:#74869a;font-size:.56rem;text-transform:uppercase;font-weight:700}
+.metric b{display:block;color:var(--navy);font:800 .9rem Manrope;margin-top:3px}
+.sheet-bars{display:flex;align-items:end;gap:8px;height:45px;margin-top:13px;padding:0 7px}
+.sheet-bars i{display:block;flex:1;background:linear-gradient(180deg,#13a89e,#80d6ca);border-radius:4px 4px 0 0}
+.product-body{padding:27px;display:flex;flex-direction:column;flex:1}
+.product-tag{display:inline-flex;align-self:flex-start;background:var(--mint);color:var(--teal-dark);padding:5px 10px;border-radius:30px;font-size:.72rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase}
+.product-body h3{font-size:1.42rem;color:var(--navy);margin:13px 0 8px}
+.product-body>p{color:var(--muted);font-size:.94rem}
+.feature-list{list-style:none;display:grid;gap:9px;margin:18px 0 22px;color:#43566d;font-size:.9rem}
+.feature-list li{display:flex;gap:9px;align-items:flex-start}
+.feature-list i{color:var(--teal-dark);margin-top:5px}
+.product-buy{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
+.price{font:800 1.8rem Manrope;color:var(--navy);line-height:1.2}
+.price small{display:block;font:500 .72rem "DM Sans",sans-serif;color:var(--muted);margin-top:4px}
+.product-buy .btn{padding:11px 16px;font-size:.9rem}
+.product-footnote{text-align:center;color:var(--muted);font-size:.84rem;margin-top:24px}
+.product-footnote a{color:var(--teal-dark);font-weight:700;text-decoration:underline}
 
-/* DIGITAL PRODUCTS */
-
-.digital-products{
-background:linear-gradient(180deg,#f7fafc,#fff);
-}
-
-.product-intro{
-max-width:790px;
-margin:-22px auto 38px;
-text-align:center;
-color:var(--muted);
-}
-
-.product-grid{
-display:grid;
-grid-template-columns:repeat(2,minmax(0,1fr));
-gap:25px;
-}
-
-.product-card{
-background:white;
-border:1px solid var(--line);
-border-radius:22px;
-overflow:hidden;
-box-shadow:0 8px 25px rgba(16,42,67,.05);
-transition:.22s;
-display:flex;
-flex-direction:column;
-}
-
-.product-card:hover{
-transform:translateY(-5px);
-box-shadow:var(--shadow);
-border-color:#b6e5df;
-}
-
-.product-visual{
-padding:25px;
-background:linear-gradient(135deg,#e9f8f5,#edf3fa);
-min-height:205px;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.sheet-preview{
-width:100%;
-max-width:390px;
-background:white;
-border:1px solid #d7e3eb;
-border-radius:13px;
-box-shadow:0 14px 30px rgba(16,42,67,.12);
-padding:15px;
-}
-
-.sheet-top{
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid #e7edf2;
-padding-bottom:10px;
-margin-bottom:12px;
-gap:10px;
-}
-
-.sheet-top strong{
-font:800 .9rem Manrope;
-color:var(--navy);
-}
-
-.sheet-top span{
-font-size:.62rem;
-color:var(--teal-dark);
-font-weight:800;
-}
-
-.sheet-metrics{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:8px;
-}
-
-.metric{
-background:#f4f8fa;
-border-radius:8px;
-padding:10px 7px;
-}
-
-.metric small{
-display:block;
-color:#74869a;
-font-size:.56rem;
-text-transform:uppercase;
-font-weight:700;
-}
-
-.metric b{
-display:block;
-color:var(--navy);
-font:800 .9rem Manrope;
-margin-top:3px;
-}
-
-.sheet-bars{
-display:flex;
-align-items:end;
-gap:8px;
-height:45px;
-margin-top:13px;
-padding:0 7px;
-}
-
-.sheet-bars i{
-display:block;
-flex:1;
-background:linear-gradient(180deg,#13a89e,#80d6ca);
-border-radius:4px 4px 0 0;
-}
-
-.product-body{
-padding:27px;
-display:flex;
-flex-direction:column;
-flex:1;
-}
-
-.product-tag{
-display:inline-flex;
-align-self:flex-start;
-background:var(--mint);
-color:var(--teal-dark);
-padding:5px 10px;
-border-radius:30px;
-font-size:.72rem;
-font-weight:800;
-letter-spacing:.5px;
-text-transform:uppercase;
-}
-
-.product-body h3{
-font-size:1.42rem;
-color:var(--navy);
-margin:13px 0 8px;
-}
-
-.product-body>p{
-color:var(--muted);
-font-size:.94rem;
-}
-
-.feature-list{
-list-style:none;
-display:grid;
-gap:9px;
-margin:18px 0 22px;
-color:#43566d;
-font-size:.9rem;
-}
-
-.feature-list li{
-display:flex;
-gap:9px;
-align-items:flex-start;
-}
-
-.feature-list i{
-color:var(--teal-dark);
-margin-top:5px;
-}
-
-.product-buy{
-margin-top:auto;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:15px;
-flex-wrap:wrap;
-border-top:1px solid var(--line);
-padding-top:18px;
-}
-
-.price{
-font:800 1.8rem Manrope;
-color:var(--navy);
-line-height:1.2;
-}
-
-.price small{
-display:block;
-font:500 .72rem "DM Sans",sans-serif;
-color:var(--muted);
-margin-top:4px;
-}
-
-.product-buy .btn{
-padding:11px 16px;
-font-size:.9rem;
-}
-
-.product-footnote{
-text-align:center;
-color:var(--muted);
-font-size:.84rem;
-margin-top:24px;
-}
-
-.product-footnote a{
-color:var(--teal-dark);
-font-weight:700;
-text-decoration:underline;
-}
-
-/* DIGITAL PRODUCT DEMO VIDEOS */
-.demo-videos{
-  background:#f7fafc;
-}
-.demo-video-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:25px;
-}
-.demo-video-card{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:22px;
-  overflow:hidden;
-  box-shadow:0 8px 25px rgba(16,42,67,.05);
-}
-.demo-video-card video{
-  display:block;
-  width:100%;
-  aspect-ratio:16/9;
-  background:#102a43;
-  object-fit:contain;
-}
+/* DEMO VIDEOS */
+.demo-videos{background:#f7fafc}
+.demo-video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}
+.demo-video-card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 8px 25px rgba(16,42,67,.05)}
+.demo-video-card video{display:block;width:100%;aspect-ratio:16/9;background:#102a43;object-fit:contain}
 .demo-video-content{padding:25px}
-.demo-video-content h3{
-  font-size:1.25rem;
-  color:var(--navy);
-  margin-bottom:8px;
-}
+.demo-video-content h3{font-size:1.25rem;color:var(--navy);margin-bottom:8px}
 .demo-video-content p{color:var(--muted);font-size:.94rem}
-.demo-video-content .video-label{
-  display:inline-block;
-  background:var(--mint);
-  color:var(--teal-dark);
-  padding:5px 10px;
-  border-radius:30px;
-  font-size:.72rem;
-  font-weight:800;
-  letter-spacing:.5px;
-  text-transform:uppercase;
-  margin-bottom:12px;
-}
-@media(max-width:650px){
-  .demo-video-grid{grid-template-columns:1fr}
-  .demo-video-content{padding:22px}
-}
-
-/* FAQ */
-
-.faq-list{
-max-width:850px;
-margin:auto;
-display:grid;
-gap:12px;
-}
-
-details{
-border:1px solid var(--line);
-border-radius:13px;
-padding:18px 20px;
-background:white;
-}
-
-summary{
-cursor:pointer;
-font-weight:700;
-color:var(--navy);
-}
-
-details p{
-padding-top:12px;
-color:var(--muted);
-font-size:.95rem;
-}
-
-/* CONTACT */
-
-.contact{
-background:linear-gradient(120deg,#e9f8f5,#f5f9fc);
-}
-
-.contact-box{
-background:white;
-border:1px solid var(--line);
-border-radius:24px;
-padding:42px;
-display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:35px;
-box-shadow:var(--shadow);
-}
-
-.contact-box h2{
-font-size:2rem;
-color:var(--navy);
-margin-bottom:12px;
-}
-
+.demo-video-content .video-label{display:inline-block;background:var(--mint);color:var(--teal-dark);padding:5px 10px;border-radius:30px;font-size:.72rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;margin-bottom:12px}
+@media(max-width:650px){.demo-video-grid{grid-template-columns:1fr}.demo-video-content{padding:22px}}
+.faq-list{max-width:850px;margin:auto;display:grid;gap:12px}
+details{border:1px solid var(--line);border-radius:13px;padding:18px 20px;background:white}
+summary{cursor:pointer;font-weight:700;color:var(--navy)}
+details p{padding-top:12px;color:var(--muted);font-size:.95rem}
+.contact{background:linear-gradient(120deg,#e9f8f5,#f5f9fc)}
+.contact-box{background:white;border:1px solid var(--line);border-radius:24px;padding:42px;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;box-shadow:var(--shadow)}
+.contact-box h2{font-size:2rem;color:var(--navy);margin-bottom:12px}
 .contact-box p{color:var(--muted)}
-
-.contact-links{
-display:grid;
-gap:13px;
-align-content:center;
-}
-
-.contact-links a{
-display:flex;
-align-items:center;
-gap:13px;
-padding:14px 16px;
-border:1px solid var(--line);
-border-radius:12px;
-font-weight:700;
-color:var(--navy);
-}
-
-.contact-links i{
-color:var(--teal-dark);
-font-size:1.2rem;
-width:24px;
-text-align:center;
-}
-
-footer{
-background:#091d30;
-color:#b6c7d4;
-padding:28px 0;
-font-size:.88rem;
-}
-
-footer .container{
-display:flex;
-justify-content:space-between;
-gap:15px;
-flex-wrap:wrap;
-}
-
+.contact-links{display:grid;gap:13px;align-content:center}
+.contact-links a{display:flex;align-items:center;gap:13px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;font-weight:700;color:var(--navy)}
+.contact-links i{color:var(--teal-dark);font-size:1.2rem;width:24px;text-align:center}
+footer{background:#091d30;color:#b6c7d4;padding:28px 0;font-size:.88rem}
+footer .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 footer strong{color:white}
-
-/* RESPONSIVE */
-
 @media(max-width:900px){
 .hero-grid,.why-grid,.contact-box{grid-template-columns:1fr}
 .card-grid,.package-grid{grid-template-columns:repeat(2,1fr)}
 .steps{grid-template-columns:repeat(2,1fr)}
 .navlinks{gap:13px}
 }
-
 @media(max-width:650px){
 .topbar .container{justify-content:center;text-align:center}
-
-nav{
-padding:14px 0;
-align-items:flex-start;
-flex-direction:column;
-gap:12px;
-}
-
-.navlinks{
-width:100%;
-gap:17px;
-overflow-x:auto;
-padding-bottom:7px;
-font-size:.86rem;
-white-space:nowrap;
-}
-
+nav{padding:14px 0;align-items:flex-start;flex-direction:column;gap:12px}
+.navlinks{width:100%;gap:17px;overflow-x:auto;padding-bottom:7px;font-size:.86rem;white-space:nowrap}
 .nav-cta{display:none}
-
 .hero{padding:72px 0}
-
 section{padding:65px 0}
-
-.card-grid,.package-grid,.steps,.product-grid{
-grid-template-columns:1fr;
-}
-
+.card-grid,.package-grid,.steps,.product-grid{grid-template-columns:1fr}
 .service-card,.package{padding:24px}
-
 .contact-box{padding:27px}
-
 .product-body{padding:23px}
-
 .product-buy{align-items:flex-start}
 }
 </style>
@@ -886,9 +191,7 @@ grid-template-columns:1fr;
 
 <header>
 <nav class="container">
-
 <a class="brand" href="#home">Amit Kumar<span>.</span></a>
-
 <ul class="navlinks">
 <li><a href="#services">Services</a></li>
 <li><a href="#approach">Why Me</a></li>
@@ -898,465 +201,222 @@ grid-template-columns:1fr;
 <li><a href="#demo-videos">Demo Videos</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-
 <a class="btn nav-cta" href="#contact">Discuss Your Profile <i class="fa-solid fa-arrow-right"></i></a>
-
 </nav>
 </header>
 
 <main>
 
 <!-- HERO -->
-
 <section class="hero" id="home">
 <div class="container hero-grid">
-
 <div>
 <div class="eyebrow"><i class="fa-solid fa-location-dot"></i> Google Business Profile Support</div>
-
 <h1>Help local customers find you, trust you and choose you.</h1>
-
-<p>
-I help local businesses keep their Google Business Profile accurate,
-useful and engaging through profile optimization, review management,
-Google Posts, customer-focused Q&A and localization.
-</p>
-
+<p>I help local businesses keep their Google Business Profile accurate, useful and engaging through profile optimization, review management, Google Posts, customer-focused Q&A and localization.</p>
 <div class="hero-actions">
 <a class="btn" href="#contact">Get a Profile Review <i class="fa-solid fa-arrow-right"></i></a>
 <a class="btn outline" href="#services">Explore Services</a>
 </div>
 </div>
-
 <div class="trust-panel">
 <div class="big">13+</div>
 <h3>Years of professional QA experience</h3>
 <p>A detail-oriented, process-led approach to business profile management.</p>
-
 <div class="trust-points">
 <div><i class="fa-solid fa-circle-check"></i> Structured quality checks</div>
 <div><i class="fa-solid fa-circle-check"></i> Clear communication</div>
 <div><i class="fa-solid fa-circle-check"></i> Customer-first execution</div>
 </div>
 </div>
-
 </div>
 </section>
 
 <!-- SERVICES -->
-
 <section class="services" id="services">
 <div class="container">
-
 <div class="section-head">
 <div class="kicker">What I can manage</div>
 <h2>Google Business Profile Services</h2>
 <p>Consistent profile maintenance helps customers understand what you offer and how to contact you.</p>
 </div>
-
 <div class="card-grid">
 
 <article class="service-card">
 <div class="iconbox"><i class="fa-solid fa-sliders"></i></div>
 <h3>Profile Optimization</h3>
 <p>Make your profile more complete, accurate and useful.</p>
-<ul>
-<li>Business details and category review</li>
-<li>Services and descriptions</li>
-<li>Hours and contact checks</li>
-<li>Photo and information review</li>
-</ul>
+<ul><li>Business details and category review</li><li>Services and descriptions</li><li>Hours and contact checks</li><li>Photo and information review</li></ul>
 </article>
 
 <article class="service-card">
 <div class="iconbox"><i class="fa-solid fa-star"></i></div>
 <h3>Review Management</h3>
 <p>Build a thoughtful process for responding to customer feedback.</p>
-<ul>
-<li>Review monitoring</li>
-<li>Professional response drafts</li>
-<li>Handling customer concerns</li>
-<li>Feedback reporting</li>
-</ul>
+<ul><li>Review monitoring</li><li>Professional response drafts</li><li>Handling customer concerns</li><li>Feedback reporting</li></ul>
 </article>
 
 <article class="service-card">
 <div class="iconbox"><i class="fa-regular fa-calendar-check"></i></div>
 <h3>Google Posts & Updates</h3>
 <p>Keep your business profile current with useful updates.</p>
-<ul>
-<li>Post calendar</li>
-<li>Offers and events</li>
-<li>Business announcements</li>
-<li>Publishing checks</li>
-</ul>
+<ul><li>Post calendar</li><li>Offers and events</li><li>Business announcements</li><li>Publishing checks</li></ul>
 </article>
 
 <article class="service-card">
 <div class="iconbox"><i class="fa-regular fa-circle-question"></i></div>
 <h3>Q&A Content & Monitoring</h3>
 <p>Help customers get answers to common questions.</p>
-<ul>
-<li>Common customer questions</li>
-<li>Accurate answer drafts</li>
-<li>Monitoring unanswered queries</li>
-<li>Policy-aligned content</li>
-</ul>
+<ul><li>Common customer questions</li><li>Accurate answer drafts</li><li>Monitoring unanswered queries</li><li>Policy-aligned content</li></ul>
 </article>
 
 <article class="service-card">
 <div class="iconbox"><i class="fa-solid fa-language"></i></div>
 <h3>Localization (L10n)</h3>
 <p>Adapt business information to your local audience.</p>
-<ul>
-<li>Localized descriptions</li>
-<li>Language consistency</li>
-<li>Local relevance</li>
-<li>Customer communication</li>
-</ul>
+<ul><li>Localized descriptions</li><li>Language consistency</li><li>Local relevance</li><li>Customer communication</li></ul>
 </article>
 
 <article class="service-card">
 <div class="iconbox"><i class="fa-solid fa-clipboard-check"></i></div>
 <h3>Profile Audit & Quality Checks</h3>
 <p>Identify outdated information and profile inconsistencies.</p>
-<ul>
-<li>Completeness checklist</li>
-<li>NAP consistency</li>
-<li>Link and hours review</li>
-<li>Action recommendations</li>
-</ul>
+<ul><li>Completeness checklist</li><li>NAP consistency</li><li>Link and hours review</li><li>Action recommendations</li></ul>
 </article>
 
 </div>
-
-<div class="note">
-<strong>Important:</strong> I do not create fake reviews, fabricate customer questions or promise Google rankings. All work follows genuine customer feedback and applicable platform policies.
-</div>
-
+<div class="note"><strong>Important:</strong> I do not create fake reviews, fabricate customer questions or promise Google rankings. All work follows genuine customer feedback and applicable platform policies.</div>
 </div>
 </section>
 
 <!-- WHY ME -->
-
 <section id="approach">
 <div class="container why-grid">
-
 <div class="why-copy">
 <div class="kicker">A quality-first approach</div>
-
 <h2>Organized execution, backed by 13+ years in QA.</h2>
-
-<p>
-My professional background is in software quality assurance and
-automation engineering. I bring the same discipline to business
-profile work: check details, identify inconsistencies and verify results.
-</p>
-
+<p>My professional background is in software quality assurance and automation engineering. I bring the same discipline to business profile work: check details, identify inconsistencies and verify results.</p>
 <div class="quality-list">
-
-<div>
-<i class="fa-solid fa-check-circle"></i>
-<div><strong>Attention to detail</strong><span>Careful checks of business information and content.</span></div>
-</div>
-
-<div>
-<i class="fa-solid fa-check-circle"></i>
-<div><strong>Structured workflows</strong><span>Clear task lists and documented updates.</span></div>
-</div>
-
-<div>
-<i class="fa-solid fa-check-circle"></i>
-<div><strong>Customer-focused communication</strong><span>Useful and respectful customer messaging.</span></div>
-</div>
-
-<div>
-<i class="fa-solid fa-check-circle"></i>
-<div><strong>Transparent reporting</strong><span>Clear updates on completed work.</span></div>
-</div>
-
+<div><i class="fa-solid fa-check-circle"></i><div><strong>Attention to detail</strong><span>Careful checks of business information and content.</span></div></div>
+<div><i class="fa-solid fa-check-circle"></i><div><strong>Structured workflows</strong><span>Clear task lists and documented updates.</span></div></div>
+<div><i class="fa-solid fa-check-circle"></i><div><strong>Customer-focused communication</strong><span>Useful and respectful customer messaging.</span></div></div>
+<div><i class="fa-solid fa-check-circle"></i><div><strong>Transparent reporting</strong><span>Clear updates on completed work.</span></div></div>
 </div>
 </div>
-
 <div class="proof-card">
 <div class="kicker">Professional background</div>
 <h3>QA Automation Engineer</h3>
-
 <p>13+ years of experience in software testing, automation framework development, API testing and quality processes.</p>
-
-<div class="proof-tags">
-<span>Selenium</span>
-<span>Playwright</span>
-<span>API Testing</span>
-<span>Java</span>
-<span>TestNG</span>
-<span>CI/CD</span>
-<span>Jenkins</span>
-</div>
-
+<div class="proof-tags"><span>Selenium</span><span>Playwright</span><span>API Testing</span><span>Java</span><span>TestNG</span><span>CI/CD</span><span>Jenkins</span></div>
 <p><a href="https://github.com/amitdhaulan" target="_blank" rel="noopener">Explore GitHub Portfolio <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
 </div>
-
 </div>
 </section>
 
 <!-- PROCESS -->
-
 <section class="process" id="process">
 <div class="container">
-
 <div class="section-head">
 <div class="kicker">Simple and transparent</div>
 <h2>How We'll Work Together</h2>
 <p>A straightforward process that keeps you involved.</p>
 </div>
-
 <div class="steps">
-
-<article class="step">
-<div class="step-no">01</div>
-<h3>Understand</h3>
-<p>Discuss your business and target customers.</p>
-</article>
-
-<article class="step">
-<div class="step-no">02</div>
-<h3>Audit & Plan</h3>
-<p>Review your profile and prepare recommendations.</p>
-</article>
-
-<article class="step">
-<div class="step-no">03</div>
-<h3>Implement</h3>
-<p>Complete approved updates and content.</p>
-</article>
-
-<article class="step">
-<div class="step-no">04</div>
-<h3>Review</h3>
-<p>Verify completed work and identify improvements.</p>
-</article>
-
+<article class="step"><div class="step-no">01</div><h3>Understand</h3><p>Discuss your business and target customers.</p></article>
+<article class="step"><div class="step-no">02</div><h3>Audit & Plan</h3><p>Review your profile and prepare recommendations.</p></article>
+<article class="step"><div class="step-no">03</div><h3>Implement</h3><p>Complete approved updates and content.</p></article>
+<article class="step"><div class="step-no">04</div><h3>Review</h3><p>Verify completed work and identify improvements.</p></article>
 </div>
 </div>
 </section>
 
 <!-- ENGAGEMENT -->
-
 <section class="packages" id="packages">
 <div class="container">
-
 <div class="section-head">
 <div class="kicker">Flexible engagement</div>
 <h2>Support That Fits Your Business</h2>
 <p>Choose a one-time review or ongoing support. Final fees are confirmed after understanding the requirements.</p>
 </div>
-
 <div class="package-grid">
-
 <article class="package">
-<div class="label">One-time</div>
-<h3>Profile Health Check</h3>
-<p>Understand what needs attention first.</p>
-<ul>
-<li>Profile completeness review</li>
-<li>Accuracy checks</li>
-<li>Recommendations</li>
-<li>Action summary</li>
-</ul>
+<div class="label">One-time</div><h3>Profile Health Check</h3><p>Understand what needs attention first.</p>
+<ul><li>Profile completeness review</li><li>Accuracy checks</li><li>Recommendations</li><li>Action summary</li></ul>
 <a class="btn outline" href="#contact">Request an Audit</a>
 </article>
-
 <article class="package featured">
-<div class="label">Ongoing Support</div>
-<h3>Monthly Profile Care</h3>
-<p>Regular updates and customer communication support.</p>
-<ul>
-<li>Profile maintenance</li>
-<li>Google Posts</li>
-<li>Review response support</li>
-<li>Q&A monitoring</li>
-<li>Monthly summary</li>
-</ul>
+<div class="label">Ongoing Support</div><h3>Monthly Profile Care</h3><p>Regular updates and customer communication support.</p>
+<ul><li>Profile maintenance</li><li>Google Posts</li><li>Review response support</li><li>Q&A monitoring</li><li>Monthly summary</li></ul>
 <a class="btn" href="#contact">Discuss Monthly Support</a>
 </article>
-
 <article class="package">
-<div class="label">Tailored</div>
-<h3>Localization & Content</h3>
-<p>Support for businesses serving multiple local markets.</p>
-<ul>
-<li>Localized content</li>
-<li>Service descriptions</li>
-<li>FAQ adaptation</li>
-<li>Language review</li>
-</ul>
+<div class="label">Tailored</div><h3>Localization & Content</h3><p>Support for businesses serving multiple local markets.</p>
+<ul><li>Localized content</li><li>Service descriptions</li><li>FAQ adaptation</li><li>Language review</li></ul>
 <a class="btn outline" href="#contact">Discuss Your Needs</a>
 </article>
-
 </div>
 </div>
 </section>
 
-<!-- NEW DIGITAL PRODUCTS SECTION -->
-
+<!-- DIGITAL PRODUCTS -->
 <section class="digital-products" id="digital-products">
-
 <div class="container">
-
 <div class="section-head">
 <div class="kicker">Digital Business Tools</div>
-
 <h2>Practical Tools to Run Your Business Better.</h2>
-
-<p>
-Simple and useful Excel tools designed for small business owners
-who want better control over sales, inventory and profitability.
-</p>
+<p>Simple and useful Excel tools designed for small business owners who want better control over sales, inventory and profitability.</p>
 </div>
-
-<p class="product-intro">
-Choose the version that matches your business requirements.
-Digital products are supplied as downloadable Excel workbooks.
-</p>
+<p class="product-intro">Choose the version that matches your business requirements. Digital products are supplied as downloadable Excel workbooks.</p>
 
 <div class="product-grid">
 
-<!-- BASIC PRODUCT -->
-
+<!-- BASIC -->
 <article class="product-card" id="biztrack-basic">
-
 <div class="product-visual">
-
 <div class="sheet-preview">
-
-<div class="sheet-top">
-<strong>BIZTRACK BASIC</strong>
-<span>SALES TRACKER</span>
-</div>
-
+<div class="sheet-top"><strong>BIZTRACK BASIC</strong><span>SALES TRACKER</span></div>
 <div class="sheet-metrics">
-
-<div class="metric">
-<small>Total Sales</small>
-<b>₹12,500</b>
+<div class="metric"><small>Total Sales</small><b>₹12,500</b></div>
+<div class="metric"><small>Gross Profit</small><b>₹3,250</b></div>
+<div class="metric"><small>Products</small><b>18</b></div>
 </div>
-
-<div class="metric">
-<small>Gross Profit</small>
-<b>₹3,250</b>
-</div>
-
-<div class="metric">
-<small>Products</small>
-<b>18</b>
-</div>
-
-</div>
-
-<div class="sheet-bars">
-<i style="height:42%"></i>
-<i style="height:67%"></i>
-<i style="height:51%"></i>
-<i style="height:88%"></i>
-<i style="height:72%"></i>
-<i style="height:100%"></i>
-</div>
-
+<div class="sheet-bars"><i style="height:42%"></i><i style="height:67%"></i><i style="height:51%"></i><i style="height:88%"></i><i style="height:72%"></i><i style="height:100%"></i></div>
 </div>
 </div>
-
 <div class="product-body">
-
 <span class="product-tag">Essential Business Tracker</span>
-
 <h3>BizTrack Pro Basic</h3>
-
-<p>
-An easy-to-use Excel tracker for small businesses that need
-simple sales records and basic business performance tracking.
-</p>
-
+<p>An easy-to-use Excel tracker for small businesses that need simple sales records and basic business performance tracking.</p>
 <ul class="feature-list">
 <li><i class="fa-solid fa-circle-check"></i> Daily sales entry</li>
 <li><i class="fa-solid fa-circle-check"></i> Basic product list</li>
 <li><i class="fa-solid fa-circle-check"></i> Basic gross profit calculation</li>
 <li><i class="fa-solid fa-circle-check"></i> Simple sales summary</li>
 </ul>
-
 <div class="product-buy">
-
-<div class="price">
-₹599
-<small>Proposed introductory price · One-time</small>
-</div>
-
-<a class="btn"
-href="https://wa.me/919654136282?text=Hello%20Amit%20Kumar%2C%20I%20want%20to%20purchase%20BizTrack%20Basic.%20Please%20share%20the%20details."
-target="_blank" rel="noopener">
-Buy Basic <i class="fa-solid fa-arrow-right"></i>
-</a>
-
+<div class="price">₹599<small>Proposed introductory price · One-time</small></div>
+<a class="btn track-whatsapp" data-track-label="Buy BizTrack Basic" href="https://wa.me/919654136282?text=Hello%20Amit%20Kumar%2C%20I%20want%20to%20purchase%20BizTrack%20Basic.%20Please%20share%20the%20details." target="_blank" rel="noopener">Buy Basic <i class="fa-solid fa-arrow-right"></i></a>
 </div>
 </div>
 </article>
 
-<!-- PRO PRODUCT -->
-
+<!-- PRO -->
 <article class="product-card" id="biztrack-pro">
-
 <div class="product-visual">
-
 <div class="sheet-preview">
-
-<div class="sheet-top">
-<strong>BIZTRACK PRO ADVANCED</strong>
-<span>BUSINESS DASHBOARD</span>
-</div>
-
+<div class="sheet-top"><strong>BIZTRACK PRO ADVANCED</strong><span>BUSINESS DASHBOARD</span></div>
 <div class="sheet-metrics">
-
-<div class="metric">
-<small>Sales</small>
-<b>₹24,500</b>
+<div class="metric"><small>Sales</small><b>₹24,500</b></div>
+<div class="metric"><small>Gross Profit</small><b>₹6,800</b></div>
+<div class="metric"><small>Stock Units</small><b>340</b></div>
 </div>
-
-<div class="metric">
-<small>Gross Profit</small>
-<b>₹6,800</b>
-</div>
-
-<div class="metric">
-<small>Stock Units</small>
-<b>340</b>
-</div>
-
-</div>
-
-<div class="sheet-bars">
-<i style="height:35%"></i>
-<i style="height:58%"></i>
-<i style="height:48%"></i>
-<i style="height:76%"></i>
-<i style="height:62%"></i>
-<i style="height:100%"></i>
-<i style="height:87%"></i>
-</div>
-
+<div class="sheet-bars"><i style="height:35%"></i><i style="height:58%"></i><i style="height:48%"></i><i style="height:76%"></i><i style="height:62%"></i><i style="height:100%"></i><i style="height:87%"></i></div>
 </div>
 </div>
-
 <div class="product-body">
-
 <span class="product-tag">Complete Business Management</span>
-
 <h3>BizTrack Pro Advanced</h3>
-
-<p>
-Small Business Sales, Inventory & Profit Management.
-Manage your business operations using one organized Excel workbook.
-</p>
-
+<p>Small Business Sales, Inventory & Profit Management. Manage your business operations using one organized Excel workbook.</p>
 <ul class="feature-list">
 <li><i class="fa-solid fa-circle-check"></i> Sales and gross profit tracking</li>
 <li><i class="fa-solid fa-circle-check"></i> Automatic inventory calculations</li>
@@ -1365,158 +425,85 @@ Manage your business operations using one organized Excel workbook.
 <li><i class="fa-solid fa-circle-check"></i> Business performance dashboard</li>
 <li><i class="fa-solid fa-circle-check"></i> Product and SKU management</li>
 </ul>
-
 <div class="product-buy">
-
-<div class="price">
-₹1,299
-<small>Proposed introductory price · One-time</small>
-</div>
-
-<a class="btn"
-href="https://wa.me/919654136282?text=Hello%20Amit%20Kumar%2C%20I%20want%20to%20purchase%20BizTrack%20Pro.%20Please%20share%20the%20details."
-target="_blank" rel="noopener">
-Buy Pro <i class="fa-solid fa-arrow-right"></i>
-</a>
-
+<div class="price">₹1,299<small>Proposed introductory price · One-time</small></div>
+<a class="btn track-whatsapp" data-track-label="Buy BizTrack Pro Advanced" href="https://wa.me/919654136282?text=Hello%20Amit%20Kumar%2C%20I%20want%20to%20purchase%20BizTrack%20Pro.%20Please%20share%20the%20details." target="_blank" rel="noopener">Buy Pro <i class="fa-solid fa-arrow-right"></i></a>
 </div>
 </div>
 </article>
 
 </div>
-
-<p class="product-footnote">
-Digital products are delivered after payment verification.
-For product enquiries, contact Amit Kumar on WhatsApp.
-<br>
-
-</p>
-
+<p class="product-footnote">Digital products are delivered after payment verification. For product enquiries, contact Amit Kumar on WhatsApp.</p>
 </div>
 </section>
 
 <!-- BIZTRACK DEMO VIDEOS -->
 <section class="demo-videos" id="demo-videos">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Product Walkthroughs</div>
-      <h2>See BizTrack in Action</h2>
-      <p>Watch these short walkthroughs to see how the Excel tools work before choosing the version that suits your business.</p>
-    </div>
+<div class="container">
+<div class="section-head">
+<div class="kicker">Product Walkthroughs</div>
+<h2>See BizTrack in Action</h2>
+<p>Watch these short walkthroughs to see how the Excel tools work before choosing the version that suits your business.</p>
+</div>
+<div class="demo-video-grid">
 
-    <div class="demo-video-grid">
-      <article class="demo-video-card">
-        <!-- Replace the video source below with the Basic demo MP4 file URL -->
-        <video controls preload="metadata" playsinline poster="">
-          <source src="videos/english_biztrack-pro-basic-demo.mp4" type="video/mp4">
-          Your browser does not support HTML video. Please update your browser.
-        </video>
-        <div class="demo-video-content">
-          <span class="video-label">Essential Sales Tracker</span>
-          <h3>BizTrack Pro Basic — Demo</h3>
-          <p>See how to enter daily sales, maintain your product list and review the basic sales summary.</p>
-        </div>
-      </article>
+<article class="demo-video-card" data-demo-name="BizTrack Pro Basic">
+<video controls preload="metadata" playsinline>
+<source src="videos/english_biztrack-pro-basic-demo.mp4" type="video/mp4">
+Your browser does not support HTML video. Please update your browser.
+</video>
+<div class="demo-video-content">
+<span class="video-label">Essential Sales Tracker</span>
+<h3>BizTrack Pro Basic — Demo</h3>
+<p>See how to enter daily sales, maintain your product list and review the basic sales summary.</p>
+</div>
+</article>
 
-      <article class="demo-video-card">
-        <!-- Replace the video source below with the Pro demo MP4 file URL -->
-        <video controls preload="metadata" playsinline poster="">
-          <source src="videos/english_biztrack-pro-basic-demo.mp4" type="video/mp4">
-          Your browser does not support HTML video. Please update your browser.
-        </video>
-        <div class="demo-video-content">
-          <span class="video-label">Complete Business Management</span>
-          <h3>BizTrack Pro Advanced — Demo</h3>
-          <p>Explore sales and purchase recording, inventory tracking, low-stock monitoring and the business dashboard.</p>
-        </div>
-      </article>
-    </div>
-  </div>
+<article class="demo-video-card" data-demo-name="BizTrack Pro Advanced">
+<video controls preload="metadata" playsinline>
+<source src="videos/english_biztrack-pro-basic-demo.mp4" type="video/mp4">
+Your browser does not support HTML video. Please update your browser.
+</video>
+<div class="demo-video-content">
+<span class="video-label">Complete Business Management</span>
+<h3>BizTrack Pro Advanced — Demo</h3>
+<p>Explore sales and purchase recording, inventory tracking, low-stock monitoring and the business dashboard.</p>
+</div>
+</article>
+
+</div>
+</div>
 </section>
 
 <!-- FAQ -->
-
 <section id="faq">
 <div class="container">
-
-<div class="section-head">
-<div class="kicker">Good to know</div>
-<h2>Frequently Asked Questions</h2>
-</div>
-
+<div class="section-head"><div class="kicker">Good to know</div><h2>Frequently Asked Questions</h2></div>
 <div class="faq-list">
-
-<details>
-<summary>Can you guarantee a higher Google ranking?</summary>
-<p>No. Local visibility depends on many factors. I focus on accurate information, quality profile maintenance and useful customer communication.</p>
-</details>
-
-<details>
-<summary>Will you need my Google account password?</summary>
-<p>No password should be shared. Authorized manager access should be used wherever access is required.</p>
-</details>
-
-<details>
-<summary>Do you provide fake reviews?</summary>
-<p>No. Reviews must come from genuine customer experiences. I can help with compliant review response processes.</p>
-</details>
-
-<details>
-<summary>What is BizTrack?</summary>
-<p>BizTrack is an Excel-based business management tool designed to help small businesses track sales, inventory and profitability. The features vary by edition.</p>
-</details>
-
-<details>
-<summary>How will I receive my digital product?</summary>
-<p>Contact Amit Kumar through WhatsApp. Payment and delivery details will be shared after your product enquiry.</p>
-</details>
-
+<details><summary>Can you guarantee a higher Google ranking?</summary><p>No. Local visibility depends on many factors. I focus on accurate information, quality profile maintenance and useful customer communication.</p></details>
+<details><summary>Will you need my Google account password?</summary><p>No password should be shared. Authorized manager access should be used wherever access is required.</p></details>
+<details><summary>Do you provide fake reviews?</summary><p>No. Reviews must come from genuine customer experiences. I can help with compliant review response processes.</p></details>
+<details><summary>What is BizTrack?</summary><p>BizTrack is an Excel-based business management tool designed to help small businesses track sales, inventory and profitability. The features vary by edition.</p></details>
+<details><summary>How will I receive my digital product?</summary><p>Contact Amit Kumar through WhatsApp. Payment and delivery details will be shared after your product enquiry.</p></details>
 </div>
 </div>
 </section>
 
 <!-- CONTACT -->
-
 <section class="contact" id="contact">
 <div class="container">
-
 <div class="contact-box">
-
 <div>
 <div class="kicker">Let's Talk</div>
-
 <h2>Ready to Improve Your Business Presence?</h2>
-
-<p>
-Tell me about your business and share your Google Business Profile link.
-I'll review your requirements and suggest a practical next step.
-</p>
-
-<p style="margin-top:20px;font-weight:700;color:#36546b">
-Amit Kumar · Google Business Profile Support
-</p>
+<p>Tell me about your business and share your Google Business Profile link. I'll review your requirements and suggest a practical next step.</p>
+<p style="margin-top:20px;font-weight:700;color:#36546b">Amit Kumar · Google Business Profile Support</p>
 </div>
-
 <div class="contact-links">
-
-<a href="https://wa.me/919654136282?text=Hi%20Amit%2C%20I%20want%20to%20discuss%20Google%20Business%20Profile%20services."
-target="_blank" rel="noopener">
-<i class="fa-brands fa-whatsapp"></i>
-WhatsApp: +91 96541 36282
-</a>
-
-<a href="mailto:amitdhaulan@gmail.com">
-<i class="fa-solid fa-envelope"></i>
-amitdhaulan@gmail.com
-</a>
-
-<a href="https://github.com/amitdhaulan" target="_blank" rel="noopener">
-<i class="fa-brands fa-github"></i>
-GitHub Portfolio
-</a>
-
+<a class="track-whatsapp" data-track-label="Main Contact WhatsApp" href="https://wa.me/919654136282?text=Hi%20Amit%2C%20I%20want%20to%20discuss%20Google%20Business%20Profile%20services." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i>WhatsApp: +91 96541 36282</a>
+<a href="mailto:amitdhaulan@gmail.com"><i class="fa-solid fa-envelope"></i>amitdhaulan@gmail.com</a>
+<a href="https://github.com/amitdhaulan" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub Portfolio</a>
 </div>
-
 </div>
 </div>
 </section>
@@ -1530,10 +517,10 @@ GitHub Portfolio
 </div>
 </footer>
 
+<!-- ANALYTICS TRACKING SCRIPT -->
 <script>
 /* Dynamic copyright year */
-document.getElementById('year').textContent =
-new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
 /* Scroll-based navigation highlighting */
 const navLinks = [...document.querySelectorAll('.navlinks a')];
@@ -1543,34 +530,109 @@ const sections = navLinks
 .filter(Boolean);
 
 if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.toggle(
+            'active',
+            link.getAttribute('href') === '#' + entry.target.id
+          );
+        });
+      }
+    });
+  }, {
+    rootMargin:'-25% 0px -65% 0px',
+    threshold:0
+  });
 
-const observer = new IntersectionObserver(entries => {
-
-entries.forEach(entry => {
-
-if (entry.isIntersecting) {
-
-navLinks.forEach(link => {
-
-link.classList.toggle(
-'active',
-link.getAttribute('href') === '#' + entry.target.id
-);
-
-});
-
+  sections.forEach(section => observer.observe(section));
 }
 
+/* BizTrack video tracking */
+document.querySelectorAll('#demo-videos .demo-video-card video').forEach(video => {
+
+  const card = video.closest('.demo-video-card');
+  const demoName = card.dataset.demoName ||
+    card.querySelector('h3')?.textContent.trim() ||
+    'Unknown Demo';
+
+  let startTracked = false;
+  let completionTracked = false;
+  let milestonesTracked = [];
+
+  // Video start — once per page load per video
+  video.addEventListener('play', function() {
+    if (!startTracked) {
+      startTracked = true;
+
+      gtag('event', 'demo_video_start', {
+        demo_name: demoName,
+        video_title: demoName
+      });
+    }
+  });
+
+  // Video progress — track 25%, 50%, 75%
+  video.addEventListener('timeupdate', function() {
+    if (!video.duration || !isFinite(video.duration)) return;
+
+    const percent = (video.currentTime / video.duration) * 100;
+
+    [25, 50, 75].forEach(function(milestone) {
+      if (percent >= milestone && !milestonesTracked.includes(milestone)) {
+        milestonesTracked.push(milestone);
+
+        gtag('event', 'demo_video_progress', {
+          demo_name: demoName,
+          video_title: demoName,
+          video_percent: milestone
+        });
+      }
+    });
+  });
+
+  // Video completed — once per page load
+  video.addEventListener('ended', function() {
+    if (!completionTracked) {
+      completionTracked = true;
+
+      gtag('event', 'demo_video_complete', {
+        demo_name: demoName,
+        video_title: demoName
+      });
+    }
+  });
+
 });
 
-}, {
-rootMargin:'-25% 0px -65% 0px',
-threshold:0
+/* WhatsApp purchase and contact click tracking */
+document.querySelectorAll('a.track-whatsapp').forEach(function(link) {
+  link.addEventListener('click', function() {
+
+    const label = link.dataset.trackLabel || link.textContent.trim();
+
+    gtag('event', 'biztrack_whatsapp_click', {
+      button_label: label,
+      link_url: link.href
+    });
+
+  });
 });
 
-sections.forEach(section => observer.observe(section));
+/* General WhatsApp click tracking for any WhatsApp link */
+document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
+  link.addEventListener('click', function() {
 
-}
+    const label = link.dataset.trackLabel || link.textContent.trim();
+
+    gtag('event', 'whatsapp_click', {
+      link_text: label,
+      link_url: link.href
+    });
+
+  });
+});
 </script>
 
 </body>
